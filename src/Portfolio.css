@@ -1,14 +1,90 @@
-.portfolio-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* Fundo geral */
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #fff3e0, #ffe0ec);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* Wrapper do portfólio */
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* Container principal */
+.portfolio-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Título com degradê */
+.portfolio-container h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #ff7043, #f06292);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Texto introdutório */
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #6d4c41;
+  padding: 0 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 15px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Layout flexível para os certificados */
+.certificates-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card do certificado */
 .certificate {
-  background-color: #f4f4f4;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
+  background: #fffaf7;
+  border: 2px dashed #f8bbd0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.1);
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.certificate:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(255, 105, 135, 0.2);
+}
+
+.certificate h2 {
+  font-size: 1.1rem;
+  color: #ec407a;
+  margin-bottom: 15px;
+  border-left: 5px solid #ffab91;
+  padding-left: 12px;
+  text-align: left;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .certificate {
+    width: 90%;
+  }
 }
