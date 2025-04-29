@@ -40,7 +40,6 @@ function Portfolio() {
 
   return (
     <div className="portfolio-wrapper">
-      {/* Perfil */}
       <section className="profile-section">
         <h1>Olá, eu sou a Lara!</h1>
         <p className="intro">
@@ -50,10 +49,8 @@ function Portfolio() {
           <a href="https://github.com/oxyzinha" target="_blank" rel="noreferrer">GitHub</a>
           <a href="https://www.instagram.com/llaramanon/" target="_blank" rel="noreferrer">Instagram</a>
         </div>
-        <a href="/Lara_CV.pdf" download className="btn-download">Baixar Currículo</a>
       </section>
 
-      {/* Skills */}
       <section className="skills-section">
         <h2>Minhas Habilidades</h2>
         <ul className="skills-list">
@@ -72,7 +69,6 @@ function Portfolio() {
         </ul>
       </section>
 
-      {/* Trabalho em Destaque */}
       <section className="featured-work">
         <h2>Trabalho em Destaque</h2>
         <a href="https://2-g-finnovationsystems.vercel.app" target="_blank" rel="noreferrer">
@@ -83,12 +79,12 @@ function Portfolio() {
         </p>
       </section>
 
-      {/* Certificados */}
       <section className="portfolio-container">
         <h2>Certificados</h2>
         <div className="certificates-wrapper">
           {certificates.map((cert) => (
-            <div key={cert.id} className="certificate">
+            <div key={cert.id} className="certificate fade-in">
+              <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🎓</div>
               <h3>{cert.title}</h3>
               <CredlyBadge badgeId={cert.id} />
             </div>
@@ -96,16 +92,13 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* Contato */}
-      <section className="contact-section">
-        <h2>Contato</h2>
-        <form action="https://formspree.io/f/{seu-id}" method="POST">
-          <input type="text" name="name" placeholder="Seu nome" required />
-          <input type="email" name="_replyto" placeholder="Seu email" required />
-          <textarea name="message" rows={4} placeholder="Sua mensagem" required />
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+      <footer className="footer">
+        <p>© 2025 Lara | Todos os direitos reservados</p>
+        <div className="footer-socials">
+          <a href="https://github.com/oxyzinha" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/llaramanon/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </footer>
     </div>
   );
 }
